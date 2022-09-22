@@ -33,14 +33,14 @@ function set_globals() {
   #================== KLIPPER ===================#
   KLIPPY_ENV="${HOME}/klippy-env"
   KLIPPER_DIR="${HOME}/klipper"
-  KLIPPER_REPO="https://github.com/Z-Bolt/klipper.git"
+  KLIPPER_REPO="https://github.com/DmitriyAD/klipper.git"
   KLIPPER_LOGS="${HOME}/klipper_logs"
   KLIPPER_CONFIG="$(get_klipper_cfg_dir)" # default: ${HOME}/klipper_config
 
   #================= MOONRAKER ==================#
   MOONRAKER_ENV="${HOME}/moonraker-env"
   MOONRAKER_DIR="${HOME}/moonraker"
-  MOONRAKER_REPO="https://github.com/Z-Bolt/moonraker.git"
+  MOONRAKER_REPO="https://github.com/DmitriyAD/moonraker.git"
 
   #================= MAINSAIL ===================#
   MAINSAIL_DIR="${HOME}/mainsail"
