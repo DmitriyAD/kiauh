@@ -57,7 +57,7 @@ function klipperscreen_setup() {
   fi
 
   status_msg "Installing KlipperScreen ..."
-  if "${KLIPPERSCREEN_DIR}"/scripts/KlipperScreen-install.sh; then
+  if "${KLIPPERSCREEN_DIR}"/scripts/bash KlipperScreen-install.sh; then
     ok_msg "KlipperScreen successfully installed!"
   else
     print_error "KlipperScreen installation failed!"
