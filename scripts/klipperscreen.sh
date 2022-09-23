@@ -57,7 +57,7 @@ function klipperscreen_setup() {
   fi
 
   status_msg "Installing KlipperScreen ..."
-  if "${KLIPPERSCREEN_DIR}" ./scripts/KlipperScreen-install.sh; then
+  if "${KLIPPERSCREEN_DIR}"/scripts/KlipperScreen-install.sh; then
     ok_msg "KlipperScreen successfully installed!"
   else
     print_error "KlipperScreen installation failed!"
@@ -218,7 +218,7 @@ function patch_klipperscreen_update_manager() {
 [update_manager KlipperScreen]
 type: git_repo
 path: ${HOME}/KlipperScreen
-origin: https://github.com/jordanruthe/KlipperScreen.git
+origin: https://github.com/DmitriyAD/KlipperScreen.git
 env: ${HOME}/.KlipperScreen-env/bin/python
 requirements: scripts/KlipperScreen-requirements.txt
 install_script: scripts/KlipperScreen-install.sh
