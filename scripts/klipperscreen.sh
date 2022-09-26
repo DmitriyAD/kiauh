@@ -42,16 +42,19 @@ function install_klipperscreen() {
 }
 
 function klipperscreen_setup() {
+  local branch=${2}
   local dep=(wget curl unzip dfu-util)
   dependency_check "${dep[@]}"
   status_msg "Cloning KlipperScreen from ${KLIPPERSCREEN_REPO} ..."
 
   # force remove existing KlipperScreen dir
   [[ -d ${KLIPPERSCREEN_DIR} ]] && rm -rf "${KLIPPERSCREEN_DIR}"
-
+  [[ -z ${branch} ]] && branch="master"
   # clone into fresh KlipperScreen dir
   cd "${HOME}" || exit 1
-  if ! git clone "${KLIPPERSCREEN_REPO}" "${KLIPPERSCREEN_DIR}"; then
+  if git clone "${KLIPPERSCREEN_REPO}" "${KLIPPERSCREEN_DIR}"; then
+    cd "${KLIPPERSCREEN_DIR}" && git checkout "${branch}"
+  else
     print_error "Cloning KlipperScreen from\n ${KLIPPERSCREEN_REPO}\n failed!"
     exit 1
   fi
