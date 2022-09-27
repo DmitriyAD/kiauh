@@ -222,10 +222,10 @@ function moonraker_setup() {
 }
 
 function clone_moonraker() {
-  local repo=${1} branch =${2}
+  local repo=${1} branch=${2}
 
   status_msg "Cloning Moonraker from ${repo} ..."
-  [[ -z ${branch} ]] && branch="master"
+    
   ### force remove existing moonraker dir and clone into fresh moonraker dir
   [[ -d ${MOONRAKER_DIR} ]] && rm -rf "${MOONRAKER_DIR}"
 
