@@ -49,7 +49,7 @@ function klipperscreen_setup() {
 
   # force remove existing KlipperScreen dir
   [[ -d ${KLIPPERSCREEN_DIR} ]] && rm -rf "${KLIPPERSCREEN_DIR}"
-  [[ -z ${branch} ]] && branch="Z-BOLTUI2-TEST"
+  [[ -z ${branch} ]] && branch="master"
   # clone into fresh KlipperScreen dir
   cd "${HOME}" || exit 1
   if git clone "${KLIPPERSCREEN_REPO}" "${KLIPPERSCREEN_DIR}"; then
