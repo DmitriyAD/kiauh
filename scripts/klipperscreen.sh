@@ -123,8 +123,7 @@ function update_klipperscreen() {
 
   do_action_service "stop" "KlipperScreen"
   cd "${KLIPPERSCREEN_DIR}"
-  git pull origin master -q && ok_msg "Fetch successfull!"
-  git checkout -f master && ok_msg "Checkout successfull"
+  git checkout -f Z-BOLTUI2 && ok_msg "Checkout successfull"
 
   if [[ $(md5sum "${KLIPPERSCREEN_DIR}/scripts/KlipperScreen-requirements.txt" | cut -d " " -f1) != "${old_md5}" ]]; then
     status_msg "New dependecies detected..."
